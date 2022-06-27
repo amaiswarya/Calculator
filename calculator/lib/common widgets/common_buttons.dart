@@ -1,3 +1,4 @@
+import 'package:calculator/utils/functions.dart';
 import 'package:flutter/material.dart';
 
 class ButtonState extends StatefulWidget {
@@ -24,9 +25,11 @@ class _ButtonStateState extends State<ButtonState> {
             primary: Colors.white, // background
             onPrimary: Colors.grey,
             shadowColor: Colors.black45),
-        onPressed: (() {}),
+        onPressed: (() {
+          calculation(text);
+        }),
         child: Text(widget.text,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 25,
               color: Colors.black54,
             )),

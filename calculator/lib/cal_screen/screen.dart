@@ -1,4 +1,5 @@
 import 'package:calculator/common%20widgets/common_widgets.dart';
+import 'package:calculator/utils/functions.dart';
 import 'package:flutter/material.dart';
 
 import '../common widgets/common_buttons.dart';
@@ -11,8 +12,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var userinput = "";
-  var answer = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,7 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.all(15),
               alignment: Alignment.centerRight,
               child: Text(
-                answer,
+                finalResult,
                 style: const TextStyle(
                     fontSize: 30,
                     color: Colors.black,
@@ -34,7 +33,7 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.all(15),
               alignment: Alignment.centerRight,
               child: Text(
-                userinput,
+                '$text',
                 style: const TextStyle(
                     fontSize: 30,
                     color: Colors.black26,
@@ -47,7 +46,7 @@ class _HomeState extends State<Home> {
             ButtonState(ht: 60, wd: 90, text: "C"),
             SpaceWidgets().HorizontalSpacing(10),
             ButtonState(ht: 60, wd: 90, text: "%"),
-            ButtonState(ht: 60, wd: 90, text: "Sqrt"),
+            ButtonState(ht: 60, wd: 90, text: "+/-"),
           ]),
           SpaceWidgets().VerticalSpacing(25),
           Row(
@@ -59,7 +58,7 @@ class _HomeState extends State<Home> {
               SpaceWidgets().HorizontalSpacing(10),
               ButtonState(ht: 60, wd: 90, text: "9"),
               SpaceWidgets().VerticalSpacing(25),
-              ButtonState(ht: 60, wd: 90, text: "*"),
+              ButtonState(ht: 60, wd: 90, text: "x"),
             ],
           ),
           SpaceWidgets().VerticalSpacing(25),
